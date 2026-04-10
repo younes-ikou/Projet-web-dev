@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+  
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+     margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 50px 5px rgba(63, 62, 62, 0.705);
+}
+.inforamtion{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+.img{
+    width: 150px;
+}
+.info-img{
+    padding: 15px 15px;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+.info-detail{
+    padding: 10px 10px;
+}
+.info-detail p {
+    font-weight: bolder;
+}
+.info-detail span{
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    
+    color: #333;
+}
+section{
+    border-top:6px solid black;
+    position: relative;
+}
+
+
+section h2 {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    bottom: 48px;
+    background: white; 
+    padding-right: 10px; 
+    background-color: rgb(101, 177, 240);
+    padding: 10px 18px;
+    border-radius: 20px;
+
+}
+
+
+ul {
+    list-style: none;
+    position: relative;
+    bottom: 40px;
+    margin-left: 30px;
+    line-height: 40px;
+    
+}
+li{
+    padding: 5px 0px;
+}
+.diagram{
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #ccc;
+    margin-right: 1px;
+    flex-shrink: 1;
+
+}
+.Compétences-list li{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+ li::before {
+    content: "✔"; 
+    position: absolute;
+    left: 20px;
+    color: black;
+    font-size: 10px;
+}
+.span-html,.span-css , .span-js , .span-py , .span-c{
+    position: relative;
+    bottom:11px;
+    display: inline-block;
+    max-width: 500px;
+    height: 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: rgb(101, 177, 240);
+
+}
+.span-html{
+    width: 65%;
+
+}
+.span-css{
+    width: 45%;
+}
+.span-js{
+    width: 5%;
+}
+.span-py{
+    width: 40%;
+}
+.span-c{
+    width: 30%;
+}
+
+i{
+    font-size: 20px;
+    padding-right: 20px;
+}
