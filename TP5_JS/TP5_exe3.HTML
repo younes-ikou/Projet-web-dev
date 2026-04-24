@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz interactif</title>
+</head>
+<body>
+    <button onclick="lancerQuiz()">Démarrer le Quiz</button>
+    <Script>
+   const QUESTIONS = [
+    ["Quelle est la capitale de la France?", "paris"],
+    ["Quelle est la capitale du MAROC?", "rabat"],
+    ["Quelle est la capitale de l'Allemagne?", "berlin"]
+];
+
+function lancerQuiz() {
+    let score = 0;
+    
+    for (let i = 0; i < QUESTIONS.length; i++) {
+        let question = QUESTIONS[i][0];
+        let reponseCorrecte = QUESTIONS[i][1];
+
+        let reponseUtilisateur = prompt(question).toLowerCase();
+
+        if (reponseUtilisateur === reponseCorrecte) {
+            alert("Réponse juste"); 
+            score++;
+        } else {
+            alert("Réponse fausse"); 
+        }
+    }
+
+    alert("Vous avez répondu correctement à " + score + " questions sur " + QUESTIONS.length);
+}
+    </Script>
+    
+</body>
+</html>

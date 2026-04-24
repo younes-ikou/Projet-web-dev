@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <h1 id="somme"></h1>
+    <h1 id="def"></h1>
+    <h1 id="pro"></h1>
+    <h1 id="Quo"></h1>
+    <script>
+        let somme=document.getElementById('somme')
+        let def=document.getElementById('def')
+        let pro=document.getElementById('pro')
+        let Quo=document.getElementById('Quo')
+let nombre1 = parseFloat(prompt("Entrez le premier nombre :"));
+let nombre2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+
+let somm = nombre1 + nombre2;
+let difference = nombre1 - nombre2;
+let produit = nombre1 * nombre2;
+let quotient = nombre1 / nombre2;
+
+somme.textContent="Somme : " + somm;
+def.textContent="Différence : " + difference;
+pro.textContent="Produit : " + produit;
+Quo.textContent="Quotient : " + quotient;
+    </script>
+</body>
+</html>
