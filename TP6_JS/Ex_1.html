@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX_1</title>
+
+</head>
+
+<body>
+    <script>
+
+        let body = document.body;
+        let mydiv = document.createElement('div');
+        let mypar = document.createElement('p');
+
+        mypar.textContent = 'Ceci est un paragraphe'
+
+        mydiv.appendChild(mypar);
+        body.appendChild(mydiv);
+
+
+        mypar.textContent = 'Le texte a été modifié';
+
+
+        mypar.style.backgroundColor = 'lightblue';
+        mypar.style.textAlign = 'center';
+
+
+        mypar.onclick = function () {
+            mypar.textContent = "Un clic a été détecté"
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

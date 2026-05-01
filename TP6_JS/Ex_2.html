@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>EX_2 | To-Do List </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        } 
+
+        .done {
+            text-decoration: line-through;
+            color: rgba(7, 166, 55, 0.785);
+        }
+      
+        .actions button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ma To-Do List</h1>
+
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Ajouter une tâche..." required>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        const form = document.getElementById("taskForm");
+        const input = document.getElementById("taskInput");
+        const list = document.getElementById("taskList");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const taskText = input.value.trim();
+            if (taskText === "") return;
+
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+
+            span.textContent = taskText;
+
+            const actions = document.createElement("div");
+            actions.classList.add("actions");
+
+            const doneBtn = document.createElement("button");
+            doneBtn.textContent = "Comple";
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "supprimer";
+
+            doneBtn.addEventListener("click", function() {
+                span.classList.toggle("done");
+            });
+
+            deleteBtn.addEventListener("click", function() {
+                li.remove();
+            });
+
+            actions.appendChild(doneBtn);
+            actions.appendChild(deleteBtn);
+
+            li.appendChild(span);
+            li.appendChild(actions);
+
+            list.appendChild(li);
+
+            input.value = "";
+        });
+    </script>
+
+</body>
+</html>
